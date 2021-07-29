@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
+  position: relative;
   display: flex;
 }
+body {
+  font-family: sans-serif;
+}
 .filtres-main {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,32 +24,158 @@
   height: 70%;
 }
 .main-main {
+  margin-left: 21%;
   padding: 20px;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   background: white;
-  width: 70%;
+  width: 78%;
 }
 .fly-main {
+  margin-bottom: 30px;
   width: 95%;
+}
+.fly-from {
+  width: 100%;
+  height: 135px;
+  border-bottom: 2px solid #0091ff;
+}
+.fly-to {
+  height: 135px;
+}
+.blue {
+  color: #03a9fc;
+}
+.accept-button {
+  color: white;
+  height: 50px;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.accept-button:hover {
+  background: gray;
+  color: black;
 }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 .header {
-  width: 100%;
-  height: 30px;
-  background: blue;
-}
+  color: white;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: space-between;
 
+  height: 50px;
+  background: #0091ff;
+}
+.cost-data {
+  text-align: left;
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+.cost-data > p {
+  font-size: 12px;
+}
+.cost-data > h3 {
+  font-size: 26px;
+}
+.from-to-name {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 20px;
+  border-bottom: 2px solid gray;
+}
+.from-to-name > p {
+  margin: 7px;
+}
+.time-fly {
+  font-size: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.time {
+
+  display: flex;
+  align-items: center;
+
+}
+.down {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.peresadka {
+  color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.peresadka:before, .peresadka:after {
+  content: '';
+  margin: 15px 30px;
+  width: 30%;
+  height: 2px;
+  background: gray;
+}
+.fly-creator {
+  margin-left: 25px;
+  font-size: 15px;
+}
+.small-blue {
+  color: #03a9fc;
+  font-size: 17px;
+  align-self: flex-end;
+  padding-left: 5px;
+  font-weight: 600;
+}
+.border-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 50px;
+}
+.button-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 221px;
+  height: 45px;
+  background: #c9c9c9;
+  border: 2px solid black;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.button-more:hover {
+  background: white;
+  border: 2px solid grey;
+}
+.radio {
+  display: flex;
+  flex-flow: column;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;

@@ -1,11 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Fly} from "./Fly";
 
-export function Main({test}) {
-    console.log(test.result.flights[4].flight.legs)
+export function Main({allFly, sort}) {
+    const [lengthFly, setLengthFly] = useState(2)
+
+
     return (
         <div className='main-main'>
-            <Fly legs={test.result.flights[4].flight.legs}  />
+
+            {
+                allFly.map((e, i)=> i < lengthFly ? (<Fly data={allFly[i]} />) : null)
+            }
+            {/*<Fly data={allFly[0]} />*/}
+            <div className="border-button">
+                    <div onClick={()=> setLengthFly(lengthFly+ 2)} className="button-more">
+                        <p>Показать еще</p>
+                    </div>
+            </div>
+
         </div>
     )
 }
