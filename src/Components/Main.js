@@ -11,7 +11,7 @@ export function Main({allFly, sort}) {
             {
                 allFly.map((e, i)=> i < lengthFly ? (<Fly data={allFly[i]} />) : null)
             }
-            {/*<Fly data={allFly[0]} />*/}
+
             <div className="border-button">
                     <div onClick={()=> setLengthFly(lengthFly+ 2)} className="button-more">
                         <p>Показать еще</p>

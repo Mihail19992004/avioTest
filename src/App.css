@@ -19,8 +19,9 @@ body {
   height: 90vh;
 }
 .options-filter {
+  padding: 0 10px;
   background: white;
-  width: 100%;
+  max-width: 100%;
   height: 70%;
 }
 .main-main {
@@ -177,6 +178,10 @@ body {
 }
 
 
+.options-filter> div {
+  max-width: 300px;
+  padding: 20px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

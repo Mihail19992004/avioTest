@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Filtres({setSort, sort}) {
+export function Filtres({favorite, setFavorite, setSort, sort, filter, setFilter, price, setPrice}) {
     function radioHandler(e) {
         const arr = document.querySelectorAll('.btn')
         console.log(e.target.name)
@@ -34,36 +34,55 @@ export function Filtres({setSort, sort}) {
 
                     </div>
                 </div>
+
+
+
                 <div className="filter">
                     <p>Фильтровать</p>
-                    <form action="" onClick={(e)=> setSort({...sort, filterOne: e.target.checked})}>
-                        <input type="checkbox" id='3' />
+                    <form action="" onClick={(e)=>
+                    {
+                        setFilter({...filter, one: e.target.checked})
+
+                    }
+
+                    }>
+                        <input checked={filter.one} type="checkbox" id='3' />
                         <label htmlFor="3">-1 пересадка</label>
                     </form>
-                    <form action="" onClick={(e)=> setSort({...sort, filterTwo: e.target.checked})}>
-                        <input type="checkbox" id='4' />
+                    <form action="" onClick={(e)=> setFilter({...filter, none: e.target.checked})}>
+                        <input checked={filter.none} type="checkbox" id='4' />
                         <label htmlFor="4">-без пересадок</label>
                     </form>
                 </div>
+
+
+
+
                 <div className="price">
                     <p>Цена</p>
                     <form action="">
                         <label htmlFor="5">от</label>
-                        <input type="number" value={sort.price_down} onChange={(e)=> setSort({
-                            ...sort,
-                            price_down: e.target.value
-                        })} id='5' />
+                        <input type="number" value={price.price_down} onChange={(e)=> setPrice({...price, price_down: +(e.target.value)})}  id='5' />
 
                     </form>
                     <form action="">
-                        <label htmlFor="6">до</label>
-                        <input type="number" value={sort.price_up} onChange={(e)=> setSort({
-                            ...sort,
-                            price_up: e.target.value
-                        })} id='6' />
+                        <label  htmlFor="6">до</label>
+                        <input type="number" value={price.price_up} onChange={(e)=> setPrice({...price, price_up: +(e.target.value)})} id='6' />
 
                     </form>
                 </div>
+
+                    <p>Авиокомпании</p>
+                    <form action="" onClick={(e)=> setFavorite({lot: false, aero: e.target.checked})}>
+                        <input checked={favorite.aero} type="checkbox" id='7'/>
+                        <label htmlFor="7">Аэрофлот - российские авиалинии от 33697.00</label>
+                    </form>
+                    <form action="" onClick={(e)=> setFavorite({aero: false, lot: e.target.checked})}>
+                        <input checked={favorite.lot} type="checkbox" id='8'/>
+                        <label htmlFor="8">LOT Polish Airlines от 21049.00 руб</label>
+                    </form>
+
+
             </div>
         </div>
     )
