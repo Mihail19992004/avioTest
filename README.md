@@ -1,6 +1,3 @@
-проект не закончен
-дописать фильтры 
-переделать стили на сасс
 
 # Getting Started with Create React App
 
